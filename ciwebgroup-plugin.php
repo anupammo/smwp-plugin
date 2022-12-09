@@ -72,8 +72,7 @@ function wporg_generate_delete_link($content)
 			],
 			home_url()
 		);
-
-		return $content . ' <a style="background-color: #b01b1b;color: #ffffff;text-decoration: none;padding: 12px 16px;border-radius: 50%;font-size: 24px;cursor: pointer;"' . esc_url($url) . '">' . esc_html__('✘', 'wporg') . '</a>';
+		return $content . ' <a style="background-color: #b01b1b;color: #ffffff;text-decoration: none;padding: 8px 16px;border-radius: 5px;margin: 50px auto;width: fit-content;display: block;" href="' . esc_url($url) . '">' . esc_html__('✘ Delete Post', 'wporg') . '</a>';
 	}
 
 	return null;
