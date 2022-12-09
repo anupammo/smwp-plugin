@@ -1,1 +1,0 @@
-// Admin Script developed by https://anupammondal.in 
