@@ -1,0 +1,19 @@
+/* stylesheet by www.anupammondal.in */
+
+.btn-style {
+    padding: 8px 16px;
+    margin: 50px auto;
+    background-color: #b01b1b;
+    color: #ffffff !important;
+    border: #b01b1b solid 2px;
+    border-radius: 25px;
+    text-decoration: none;
+    width: fit-content;
+    display: block;
+    transition: 0.3s;
+}
+.btn-style:hover {
+    background-color: #ffffff;
+    color: #b01b1b !important;
+    border: #b01b1b solid 2px;
+}

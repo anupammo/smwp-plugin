@@ -72,7 +72,7 @@ function wporg_generate_delete_link($content)
 			],
 			home_url()
 		);
-		return $content . ' <a style="background-color: #b01b1b;color: #ffffff;text-decoration: none;padding: 8px 16px;border-radius: 5px;margin: 50px auto;width: fit-content;display: block;" href="' . esc_url($url) . '">' . esc_html__('✘ Delete Post', 'wporg') . '</a>';
+		return $content . ' <a class="btn-style" href="' . esc_url($url) . '">' . esc_html__('✘ Delete Post', 'wporg') . '</a>';
 	}
 
 	return null;
@@ -117,3 +117,8 @@ add_filter('the_content', 'wporg_generate_delete_link');
  * Register our request handler with the init hook.
  */
 add_action('init', 'wporg_delete_post');
+
+function ciwebgroup_styles() {
+    wp_enqueue_style( 'movies',  plugin_dir_url( __FILE__ ) . 'public/css/style.css' );
+}
+add_action( 'wp_enqueue_scripts', 'ciwebgroup_styles' );
