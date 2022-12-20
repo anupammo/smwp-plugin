@@ -17,41 +17,6 @@
  */
 
 
-/**
- * Register the "book" custom post type
- */
-function pluginprefix_setup_post_type()
-{
-	register_post_type('book', ['public' => true]);
-}
-add_action('init', 'pluginprefix_setup_post_type');
-
-
-/**
- * Activate the plugin.
- */
-function pluginprefix_activate()
-{
-	// Trigger our function that registers the custom post type plugin.
-	pluginprefix_setup_post_type();
-	// Clear the permalinks after the post type has been registered.
-	flush_rewrite_rules();
-}
-register_activation_hook(__FILE__, 'pluginprefix_activate');
-
-
-/**
- * Deactivation hook.
- */
-function pluginprefix_deactivate()
-{
-	// Unregister the post type, so the rules are no longer in memory.
-	unregister_post_type('book');
-	// Clear the permalinks to remove our post type's rules from the database.
-	flush_rewrite_rules();
-}
-register_deactivation_hook(__FILE__, 'pluginprefix_deactivate');
-
 
 /**
  * Generate a Delete link based on the homepage url.
@@ -60,6 +25,20 @@ register_deactivation_hook(__FILE__, 'pluginprefix_deactivate');
  *
  * @return string|null
  */
+
+function ciwebgroup_styles() {
+    wp_enqueue_style( 'movies',  plugin_dir_url( __FILE__ ) . 'public/css/style.css' );
+}
+
+function festiv_wish($festiv) {
+	// show the wish only in single post page
+	if(is_single() && 'post' == get_post_type()) {
+		return $festiv = '<div id="' .'wish-text'. '"><h4 class="' .'text-center'. '">Wishies from Santa 🎅 <br />for Upcoming Xmas 🎄</h4></div>';
+	}
+  
+  return $festiv;
+}
+
 function wporg_generate_delete_link($content)
 {
 	// Run only for single post page.
@@ -107,18 +86,7 @@ function wporg_delete_post()
 	}
 }
 
-
-/**
- * Add the delete link to the end of the post content.
- */
-add_filter('the_content', 'wporg_generate_delete_link');
-
-/**
- * Register our request handler with the init hook.
- */
-add_action('init', 'wporg_delete_post');
-
-function ciwebgroup_styles() {
-    wp_enqueue_style( 'movies',  plugin_dir_url( __FILE__ ) . 'public/css/style.css' );
-}
 add_action( 'wp_enqueue_scripts', 'ciwebgroup_styles' );
+// add_filter('the_content', 'wporg_generate_delete_link');
+// add_action('init', 'wporg_delete_post');
+add_filter('the_content', 'festiv_wish');
