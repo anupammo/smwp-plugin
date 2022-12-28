@@ -17,76 +17,73 @@
  */
 
 
-
-/**
- * Generate a Delete link based on the homepage url.
- *
- * @param string $content   Existing content.
- *
- * @return string|null
- */
-
-function ciwebgroup_styles() {
-    wp_enqueue_style( 'movies',  plugin_dir_url( __FILE__ ) . 'public/css/style.css' );
-}
-
-function festiv_wish($festiv) {
-	// show the wish only in single post page
-	if(is_single() && 'post' == get_post_type()) {
-		return $festiv = '<div id="' .'wish-text'. '"><h4 class="' .'text-center'. '">Wishies from Santa 🎅 <br />for Upcoming Xmas 🎄</h4></div>';
-	}
-  
-  return $festiv;
-}
-
-function wporg_generate_delete_link($content)
+function ourPluginSettingsLink()
 {
-	// Run only for single post page.
-	if (is_single() && in_the_loop() && is_main_query()) {
-		// Add query arguments: action, post.
-		$url = add_query_arg(
-			[
-				'action' => 'wporg_frontend_delete',
-				'post'   => get_the_ID(),
-			],
-			home_url()
-		);
-		return $content . ' <a class="btn-style" href="' . esc_url($url) . '">' . esc_html__('✘ Delete Post', 'wporg') . '</a>';
-	}
-
-	return null;
+	add_options_page('CI Web Group Settings', 'CI Web Group', 'manage_options', 'ci-web-group-settings-page', 'ourSettingsPageHTML');
 }
 
-
-/**
- * Request handler
- */
-function wporg_delete_post()
+function ourSettingsPageHTML()
 {
-	if (isset($_GET['action']) && 'wporg_frontend_delete' === $_GET['action']) {
+	wp_enqueue_style('style',  plugin_dir_url(__FILE__) . 'public/css/style.css');
+	wp_enqueue_script('script',  plugin_dir_url(__FILE__) . 'public/js/admin-setting.js');
+?>
 
-		// Verify we have a post id.
-		$post_id = (isset($_GET['post'])) ? ($_GET['post']) : (null);
+	<h1>Settings of CI Web Group</h1>
+	<hr />
+	<form class="plugin-form" action="">
+		<p id="demo"></p>
+		<ol class="ol-style">
+			<li>
+				<p class="mb-5">Do you have Facebook account?</p>
+				<input type="radio" id="fbYes" name="fb_ac" value="Yes" onchange="fburlYes()">
+				<label>Yes</label>
+				<input type="radio" id="fbNo" name="fb_ac" value="No" onchange="fburlNo()">
+				<label>No</label>
+				<br />
+				<div id="fburlyes">
+					<label class="my-10">URL of your Facebook account / page</label>
+					<input type="url" id="fb_url" disabled>
+				</div>
+			</li>
+			<li>
+				<p class="mb-5">Do you have Linkedin account?</p>
+				<input type="radio" id="liYes" name="li_ac" value="Yes" onchange="liurlYes()">
+				<label>Yes</label>
+				<input type="radio" id="liNo" name="li_ac" value="No" onchange="liurlNo()">
+				<label>No</label>
+				<br />
+				<div id="liurlyes">
+					<label class="my-10">URL of your Linkedin account / page</label>
+					<input type="url" id="li_url" disabled>
+				</div>
+			</li>
+			<li>
+				<p class="mb-5">Do you have Instagram account?</p>
+				<input type="radio" id="instaYes" name="insta_ac" value="Yes" onchange="instaurlYes()">
+				<label>Yes</label>
+				<input type="radio" id="instaNo" name="insta_ac" value="No" onchange="instaurlNo()">
+				<label>No</label>
+				<br />
+				<div id="instaurlYes">
+					<label class="my-10">URL of your Instagram account / page</label>
+					<input type="url" id="insta_url" disabled>
+				</div>
+			</li>
+			<li>
+				<p class="mb-5">Do you have Twitter account?</p>
+				<input type="radio" id="tweetYes" name="tweet_ac" value="Yes" onchange="tweeturlYes()">
+				<label>Yes</label>
+				<input type="radio" id="tweetNo" name="tweet_ac" value="No" onchange="tweeturlNo()">
+				<label>No</label>
+				<br />
+				<div id="tweeturlyes">
+					<label class="my-10">URL of your Twitter account / page</label>
+					<input type="url" id="tweet_url" disabled>
+				</div>
+			</li>
+		</ol>
+	</form>
 
-		// Verify there is a post with such a number.
-		$post = get_post((int) $post_id);
-		if (empty($post)) {
-			return;
-		}
+<?php }
 
-		// Delete the post.
-		wp_trash_post($post_id);
-
-		// Redirect to admin page.
-		$redirect = admin_url('edit.php');
-		wp_safe_redirect($redirect);
-
-		// We are done.
-		die;
-	}
-}
-
-add_action( 'wp_enqueue_scripts', 'ciwebgroup_styles' );
-// add_filter('the_content', 'wporg_generate_delete_link');
-// add_action('init', 'wporg_delete_post');
-add_filter('the_content', 'festiv_wish');
+add_action('admin_menu', 'ourPluginSettingsLink');
