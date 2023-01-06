@@ -8,3 +8,7 @@ label {
 input[type=checkbox] {
     margin-top: 0px;
 }
+
+ul#social-icon-links li { 
+    color: blue;
+}

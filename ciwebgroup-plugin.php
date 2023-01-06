@@ -26,20 +26,39 @@ class CIWebGroupPlugin
 		add_filter('the_content', array($this, 'ifWrap'));
 	}
 
-	function ifWrap($content) {
-		if((is_main_query() AND is_single()) AND 
-		(
-			get_option('wcp_wordcount', '1') OR 
-			get_option('wcp_charactercount', '1') OR 
-			get_option('wcp_readtime', '1')
-		)) {
+	function ifWrap($content)
+	{
+		if (
+			(is_main_query() and is_single())
+			and
+			(get_option('wcp_wordcount', '1') or
+				get_option('wcp_charactercount', '1') or
+				get_option('wcp_readtime', '1')
+			)
+		) {
 			return $this->createHTML($content);
 		}
 		return $content;
 	}
 
-	function createHTML($content) {
-		return $content. ' Anupam';
+	function createHTML($content)
+	{
+		$html = '<p id="social-icon-links">
+			<span>
+				<a href=' . get_option('ciwg_fburl', 'https://www.facebook.com/') . '  target="_blank">Facebook</a>
+			</span>
+			<span>
+				<a href=' . get_option('ciwg_tweeturl', 'https://twitter.com/') . '  target="_blank">Twitter</a>
+			</span>
+			<span>
+				<a href=' . get_option('ciwg_linkedinurl', 'https://www.linkedin.com/') . ' target="_blank">Linkedin</a>
+			</span>
+		</p>';
+
+		if (get_option('ciwg_location', '0') == '0') {
+			return $html . $content;
+		}
+		return $content . $html;
 	}
 
 	function settings()
