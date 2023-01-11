@@ -1,49 +1,29 @@
 /* stylesheet by www.anupammondal.in */
 
-.btn-style {
-    padding: 8px 16px;
-    margin: 50px auto;
-    background-color: #b01b1b;
-    color: #ffffff !important;
-    border: #b01b1b solid 2px;
-    border-radius: 25px;
-    text-decoration: none;
-    width: fit-content;
-    display: block;
-    transition: 0.3s;
+span.i-16 a svg {
+    width: 16px;
+    height: 16px;
 }
 
-.btn-style:hover {
-    background-color: #ffffff;
-    color: #b01b1b !important;
-    border: #b01b1b solid 2px;
+span.i-24 a svg {
+    width: 24px;
+    height: 24px;
 }
 
-div#wish-text {
-    border: #b01b1b solid 1px;
-    border-radius: 5px;
+span.i-32 a svg {
+    width: 32px;
+    height: 32px;
 }
 
-.text-center {
+.txt-center {
     text-align: center;
-    color: #b01b1b;
 }
 
-ol.ol-style li>input[type=radio] {
+#social-icon-links span a {
+    color: blue;
+    text-decoration: none;
+}
+
+#social-icon-links span a svg {
     margin: 5px;
-}
-
-ol.ol-style li>input[type=url] {
-    margin-top: 10px;
-}
-
-ol.ol-style li>p {
-    font-size: 16px;
-}
-.my-10 {
-    display: block;
-    margin: 10px auto;
-}
-.mb-5 {
-    margin-bottom: 5px;
 }
