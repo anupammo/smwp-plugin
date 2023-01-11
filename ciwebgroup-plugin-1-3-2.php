@@ -1,19 +1,7 @@
 <?php
 
 /**
- * Plugin Name: CIwebGroup-Plugin
- * Plugin URI: https://www.ciwebgroup.com/ciwebgroup-plugin/
- * Description: Extendify the blocks and template features of Elementor. Also can get lots of new template designes for pages and blocks for Elementor.
- * Version: 1.3.3
- * Requires at least: 5.2
- * Requires PHP: 7.2
- * Author: Anupam Mondal
- * Author URI: https://anupammondal.in/
- * License: GPL v2 or later
- * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Update URI: https://www.ciwebgroup.com/update-ciwebgroup-plugin/
- * Text Domain: ciwebgroup-plugin
- * Domain Path: /languages
+ * Version: 1.3.2
  */
 
 

@@ -48,9 +48,8 @@
     display: inline-block;
 }
 
-#social-icon-links span span a,
 #social-icon-links span,
-#social-icon-links span span {
+#social-icon-links span a {
     display: inline-block;
 }
 
