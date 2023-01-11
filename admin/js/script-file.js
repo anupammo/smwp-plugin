@@ -4,10 +4,12 @@ function fburlYes() {
     var x = document.getElementById("fbYes").checked;
     if (x == 'true') {
         document.getElementById("fb_url").disabled = true;
+        const ifacebook = document.getElementById('i-facebook');
+        ifacebook.style.display = 'none';
     } else {
         document.getElementById("fb_url").disabled = false;
     }
-} 
+}
 function fburlNo() {
     var x = document.getElementById("fbNo").checked;
     if (x == 'true') {
@@ -24,7 +26,7 @@ function liurlYes() {
     } else {
         document.getElementById("li_url").disabled = false;
     }
-} 
+}
 function liurlNo() {
     var x = document.getElementById("liNo").checked;
     if (x == 'true') {
@@ -58,7 +60,7 @@ function tweeturlYes() {
     } else {
         document.getElementById("tweet_url").disabled = false;
     }
-} 
+}
 function tweeturlNo() {
     var x = document.getElementById("tweetNo").checked;
     if (x == 'true') {
@@ -75,7 +77,7 @@ function linkedinurlYes() {
     } else {
         document.getElementById("linkedin_url").disabled = false;
     }
-} 
+}
 function linkedinurlNo() {
     var x = document.getElementById("linkedinNo").checked;
     if (x == 'true') {
