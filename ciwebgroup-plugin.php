@@ -12,7 +12,7 @@
  * License: GPL v2 or later
  * License URI: https://github.com/anupammo/smwp-plugin/blob/main/LICENSE
  * Update URI: https://anupammondal.in/ciwebgroup-plugin/update
- * Text Domain: ciwebgroup-plugin
+ * Text Domain: smwpp-cta
  * Domain Path: /languages
  */
 
