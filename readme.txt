@@ -1,7 +1,7 @@
 === SMWPP-CTA ===
-Contributors: Anupam Mondal
+Contributors: anupamwp
 Donate link: https://anupammondal.in/
-Tags: comments, spam, cache
+Tags: social, media, cta, link
 Requires at least: 4.0
 Tested up to: 4.8
 Stable tag: trunk
@@ -40,7 +40,7 @@ Answer to foo bar dilemma.
 
 == Screenshots ==
 
-1. social_media_wordpress_plugin_setting
+1. social media wordpress plugin setting
 
 == Changelog ==
 
