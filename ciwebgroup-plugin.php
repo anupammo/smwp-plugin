@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Plugin Name: CIwebGroup-Plugin
+ * Plugin Name: SMWPP-CTA
  * Plugin URI: https://www.ciwebgroup.com/ciwebgroup-plugin/
  * Description: Extendify the blocks and template features of Elementor. Also can get lots of new template designes for pages and blocks for Elementor.
  * Version: 1.3.3
