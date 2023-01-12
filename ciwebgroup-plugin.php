@@ -214,7 +214,7 @@ class CIWebGroupPlugin
 
 	function adminPage()
 	{
-		add_options_page('CI Web Group Settings', 'CI Web Group', 'manage_options', 'ci-web-group-settings-page', array($this, 'settingsHTML'));
+		add_options_page('CI Web Group Settings', 'Social media CTA', 'manage_options', 'ci-web-group-settings-page', array($this, 'settingsHTML'));
 	}
 
 	function settingsHTML()
@@ -222,7 +222,7 @@ class CIWebGroupPlugin
 		wp_enqueue_style('style',  plugin_dir_url(__FILE__) . 'admin/css/style-sheet.css');
 		wp_enqueue_script('script',  plugin_dir_url(__FILE__) . 'admin/js/script-file.js');
 	?>
-		<h1>Settings of CI Web Group</h1>
+		<h1>Settings of Social Media WordPress plugin</h1>
 		<form action="options.php" method="POST">
 			<?php
 			settings_fields('ciwebgroupplugin');
