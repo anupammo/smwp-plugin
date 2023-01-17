@@ -2,9 +2,9 @@
 Contributors: anupamwp
 Donate link: https://anupammondal.in/
 Tags: social, media, cta, link
-Requires at least: 4.0
-Tested up to: 4.8
-Stable tag: trunk
+Requires at least: 5.4
+Tested up to: 6.1
+Stable tag: 1.3.3
 Requires PHP: 5.4
 License: GPLv2 or later
 License URI: https://github.com/anupammo/smwp-plugin/blob/main/LICENSE

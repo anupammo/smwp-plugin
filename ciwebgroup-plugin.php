@@ -5,13 +5,12 @@
  * Plugin URI: https://anupammondal.in/ciwebgroup-plugin/
  * Description: Extendify the blocks and template features of Elementor. Also can get lots of new template designes for pages and blocks for Elementor.
  * Version: 1.3.3
- * Requires at least: 5.2
+ * Requires at least: 5.4
  * Requires PHP: 7.2
  * Author: Anupam Mondal
  * Author URI: https://anupammondal.in/
  * License: GPL v2 or later
  * License URI: https://github.com/anupammo/smwp-plugin/blob/main/LICENSE
- * Update URI: https://anupammondal.in/ciwebgroup-plugin/update
  * Text Domain: smwpp-cta
  * Domain Path: /languages
  */
