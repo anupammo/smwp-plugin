@@ -23,19 +23,18 @@ This section describes how to install the plugin and get it working.
 e.g.
 
 1. Upload the plugin files to the `/wp-content/plugins/plugin-name` directory, or install the plugin through the WordPress plugins screen directly.
-1. Activate the plugin through the 'Plugins' screen in WordPress
-1. Use the Settings->Plugin Name screen to configure the plugin
-1. (Make your instructions match the desired user flow for activating and installing your plugin. Include any steps that might be needed for explanatory purposes)
+2. Activate the plugin through the 'Plugins' screen in WordPress [Screenshot - 2]
+3. Use the Settings->Social Media CTA menu to configure the plugin [Screenshot - 3]
 
 == Frequently Asked Questions ==
 
-= A question that someone might have =
+= How SMWPP-CTA helps me? =
 
-An answer to that question.
+SMWPP-CTA plugin is a WordPress Plugin for Social Media links perfrom as Click to Action button with icons. Right now plugin have only have the Facebook, Twitter and Linkedin options. Can be placed top of the content or in the bottom of content for both page and post. Also can set the alignment left, right or center easily.
 
-= What about foo bar? =
+= Is it safe? =
 
-Answer to foo bar dilemma.
+Absolutely safe and secured. Verified by WordPress plugin teams several time before publish.
 
 
 == Screenshots ==
@@ -43,7 +42,7 @@ Answer to foo bar dilemma.
 1. social media wordpress plugin setting
 
 == Changelog ==
-
+N/A
 
 == Upgrade Notice ==
-
+Soon you'll get more features as update.
