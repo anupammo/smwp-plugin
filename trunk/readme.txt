@@ -3,8 +3,8 @@ Contributors: anupamwp
 Donate link: https://anupammondal.in/
 Tags: social, media, cta, link
 Requires at least: 5.4
-Tested up to: 6.1
-Stable tag: 1.3.3
+Tested up to: 6.5.5
+Stable tag: 1.3.4
 Requires PHP: 5.4
 License: GPLv2 or later
 License URI: https://github.com/anupammo/smwp-plugin/blob/main/LICENSE
@@ -42,7 +42,11 @@ Absolutely safe and secured. Verified by WordPress plugin teams several time bef
 1. social media wordpress plugin setting
 
 == Changelog ==
-N/A
+= 1.3.4 =
+* New feature: NA
+* Improvement: Compatible with WordPress 6.5.5
+* Fix: Tested with the latest major releases of WordPress 6.5.5
+
 
 == Upgrade Notice ==
 Soon you'll get more features as update.
