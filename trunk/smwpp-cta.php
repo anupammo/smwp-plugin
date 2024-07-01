@@ -2,7 +2,7 @@
 
 /**
  * Plugin Name: SMWPP-CTA
- * Plugin URI: https://anupammondal.in/ciwebgroup-plugin/
+ * Plugin URI: https://github.com/anupammo/smwp-plugin/
  * Description: Extendify the blocks and template features of Elementor. Also can get lots of new template designes for pages and blocks for Elementor.
  * Version: 1.3.4
  * Requires at least: 5.4
