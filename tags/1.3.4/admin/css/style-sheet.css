@@ -1,0 +1,10 @@
+/* stylesheet by www.anupammondal.in */
+
+label {
+    padding-right: 15px;
+    font-size: 1.4em;
+}
+
+input[type=checkbox] {
+    margin-top: 0px;
+}
